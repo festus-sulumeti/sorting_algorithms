@@ -16,7 +16,7 @@ while (n->prev != NULL && n->n < n->prev->n)
 {
 back = n->prev->prev;
 n->prev->next = n->next;
-n ->next = n->prev;
+n->next = n->prev;
 n->prev->prev = n;
 n->prev = back;
 if (back != NULL)
@@ -25,7 +25,7 @@ front = n;
 while (front->prev != NULL)
 front = front->prev;
 print_list(front);
-}   
+}
 }
 
 /**
@@ -36,7 +36,7 @@ print_list(front);
 */
 void forwards_in_swapping(listint_t *n)
 {
-listint_t *back, *front;  
+listint_t *back, *front;
 
 back = n->prev;
 
@@ -63,7 +63,7 @@ backwards_in_swapping(n->prev);
 * @list: doubly linked list to sort
 *
 * Return: void
-*/ 
+*/
 
 void insertion_sort_list(listint_t **list)
 {
@@ -96,4 +96,5 @@ backwards_in_swapping(n->prev);
 else
 forwards_in_swapping(n);
 n = n->next;
+}
 }
